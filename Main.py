@@ -23,10 +23,14 @@ và cải thiện quản lý kho cho ABC Manufacturing, sử dụng tập dữ l
 huấn luyện mô hình (KMeans, Linear Regression), và đánh giá (R², MSE, MAE, Silhouette Score).
 """)
 
-# Bước 1: Thu thập dữ liệu
-st.header("Bước 1: Thu thập dữ liệu")
-st.write("Tải lên file **marketing_campaign.csv** từ Kaggle (phân cách bằng tab).")
-uploaded_file = st.file_uploader("Chọn file CSV", type=["csv"])
+# Đường dẫn raw của file CSV trên GitHub
+url = "https://raw.githubusercontent.com/AuroraEvan/Marketing-campaign.github.io/main/ten_file.csv"
+
+# Đọc file CSV trực tiếp từ GitHub
+df = pd.read_csv(url)
+
+# Hiển thị dữ liệu trên Streamlit
+st.write(df.head())
 
 if uploaded_file is not None:
     try:
