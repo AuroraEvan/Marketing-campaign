@@ -1,4 +1,4 @@
-st.title("Phân tích khách hàng và tối ưu hóa chiến dịch tiếp thị (P7)")
+
 
 # Mô tả
 st.write("""
